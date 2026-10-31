@@ -1,0 +1,15 @@
+{
+  "executed_by": "Commander takeover",
+  "tests": 10,
+  "frozen_contract_tests": 3,
+  "pairs": 57,
+  "seeds": 100,
+  "metric_rows": 102600,
+  "split_records": 5700,
+  "max_metric_absolute_difference": 1.6653345369377348e-16,
+  "all_original_splits_byte_identical": true,
+  "exact_submitted_zip_sha256": "b5fc15fee6c5af12b2cbaa79ac4828ac72a8765a2d7ee18891ac674994724e03",
+  "independent_review": "BLOCKED_NO_ENABLED_REVIEWER",
+  "scientific_generalization": "NOT_ESTABLISHED",
+  "formal_submission": "NOT_PERFORMED"
+}

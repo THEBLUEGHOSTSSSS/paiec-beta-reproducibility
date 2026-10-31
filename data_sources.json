@@ -1,0 +1,56 @@
+{
+  "revision": "54074453da7b9911be0f48e4c560be547bc84d21",
+  "files": [
+    {
+      "local_path": "paiec/data/54074453da7b9911be0f48e4c560be547bc84d21/real_webagents/benchmarks.parquet",
+      "expected_sha256": "747b4a61dabe1fbc9f212dfff3cb7afb3a0b7480e6da1eb5e001ea30d60b0c9a",
+      "source_url": "https://huggingface.co/datasets/aims-foundations/measurement-db/resolve/54074453da7b9911be0f48e4c560be547bc84d21/real_webagents/formatted_tables/benchmarks.parquet",
+      "availability_checked_this_turn": false
+    },
+    {
+      "local_path": "paiec/data/54074453da7b9911be0f48e4c560be547bc84d21/real_webagents/subjects.parquet",
+      "expected_sha256": "e563ff232af0d2241220e9857cdc65c64b67b9301aae594677a60ff3308e7fa5",
+      "source_url": "https://huggingface.co/datasets/aims-foundations/measurement-db/resolve/54074453da7b9911be0f48e4c560be547bc84d21/real_webagents/formatted_tables/subjects.parquet",
+      "availability_checked_this_turn": false
+    },
+    {
+      "local_path": "paiec/data/54074453da7b9911be0f48e4c560be547bc84d21/real_webagents/items.parquet",
+      "expected_sha256": "5908db1f903c608e00911d50ca7ec0fa0e1b5bf4a09365d4ad52e0e1fde8f136",
+      "source_url": "https://huggingface.co/datasets/aims-foundations/measurement-db/resolve/54074453da7b9911be0f48e4c560be547bc84d21/real_webagents/formatted_tables/items.parquet",
+      "availability_checked_this_turn": false
+    },
+    {
+      "local_path": "paiec/data/54074453da7b9911be0f48e4c560be547bc84d21/real_webagents/responses.parquet",
+      "expected_sha256": "56d1fca0b984a30701f165f550e979d96c71b79af3b11a482e4eba5771065213",
+      "source_url": "https://huggingface.co/datasets/aims-foundations/measurement-db/resolve/54074453da7b9911be0f48e4c560be547bc84d21/real_webagents/formatted_tables/responses.parquet",
+      "availability_checked_this_turn": false
+    },
+    {
+      "local_path": "paiec/data/54074453da7b9911be0f48e4c560be547bc84d21/researchcodebench/benchmarks.parquet",
+      "expected_sha256": "935efcdc5dac86f2f292f0cd8c772600595dc09cf81adff20bb43e271c21ae30",
+      "source_url": "https://huggingface.co/datasets/aims-foundations/measurement-db/resolve/54074453da7b9911be0f48e4c560be547bc84d21/researchcodebench/formatted_tables/benchmarks.parquet",
+      "availability_checked_this_turn": false
+    },
+    {
+      "local_path": "paiec/data/54074453da7b9911be0f48e4c560be547bc84d21/researchcodebench/subjects.parquet",
+      "expected_sha256": "c8dbb5ac589749270ddea2be6e456ea22b991d5ffc5107fd80d0865a77e94b3a",
+      "source_url": "https://huggingface.co/datasets/aims-foundations/measurement-db/resolve/54074453da7b9911be0f48e4c560be547bc84d21/researchcodebench/formatted_tables/subjects.parquet",
+      "availability_checked_this_turn": false
+    },
+    {
+      "local_path": "paiec/data/54074453da7b9911be0f48e4c560be547bc84d21/researchcodebench/items.parquet",
+      "expected_sha256": "3aee135afa6b206cbce8867beca681811d95579db34a0c0eed1822d8c6b01268",
+      "source_url": "https://huggingface.co/datasets/aims-foundations/measurement-db/resolve/54074453da7b9911be0f48e4c560be547bc84d21/researchcodebench/formatted_tables/items.parquet",
+      "availability_checked_this_turn": false
+    },
+    {
+      "local_path": "paiec/data/54074453da7b9911be0f48e4c560be547bc84d21/researchcodebench/responses.parquet",
+      "expected_sha256": "318c067d86f35dd057e6b4d33114d4ae46447c9ef91e1b4bddba7667fc8c0375",
+      "source_url": "https://huggingface.co/datasets/aims-foundations/measurement-db/resolve/54074453da7b9911be0f48e4c560be547bc84d21/researchcodebench/formatted_tables/responses.parquet",
+      "availability_checked_this_turn": false
+    }
+  ],
+  "raw_tables_included": false,
+  "row_or_label_data_included": false,
+  "note": "Pinned source references only. Obtain permitted tables separately and verify hashes before reproduction."
+}
