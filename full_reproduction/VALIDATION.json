@@ -1,0 +1,61 @@
+{
+  "mean_targets": {
+    "fits": 0,
+    "recomputed_targets_equal_original": true,
+    "sources": 8
+  },
+  "original_integrity": {
+    "checked_files": 394,
+    "drift": []
+  },
+  "projection": {
+    "files": 306,
+    "raw_text_token_label_arrays_excluded": true,
+    "retained_arrays_exact": true,
+    "transforms": 15
+  },
+  "scores": {
+    "cross": {
+      "max_gate_error": 0.0,
+      "max_group_error": 0.0,
+      "max_score_error": 0.0,
+      "metadata_exact": true,
+      "rows": 70200
+    },
+    "isolation": {
+      "new_fits": 0,
+      "passed": true,
+      "violations": 0
+    },
+    "mean": {
+      "max_gate_error": 0.0,
+      "max_group_error": 1.1102230246251565e-16,
+      "max_score_error": 1.6653345369377348e-16,
+      "metadata_exact": true,
+      "rows": 105300
+    },
+    "proxy": {
+      "max_gate_error": 0.0,
+      "max_group_error": 0.0,
+      "max_score_error": 5.551115123125783e-17,
+      "metadata_exact": true,
+      "rows": 140400
+    },
+    "semantic": {
+      "max_score_error": 0.0,
+      "rows": 39690
+    }
+  },
+  "training": {
+    "actual_poison_refits": 4,
+    "additional_commander_fits": 0,
+    "fits": 155,
+    "max_parameter_error": 0.0
+  },
+  "release_status": "Local validation passed; independent model review incomplete",
+  "checks_rerun": {
+    "date": "2026-11-03",
+    "behavioral_tests_passed": 6,
+    "new_fits": 0
+  }
+}
