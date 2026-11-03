@@ -1,0 +1,422 @@
+[
+  {
+    "original_path": "paiec/affine_calibration_20261015/core.py",
+    "original_sha256": "aa2b84b5df511227c74f3e27f99a65db63fb4352035bbff0e0550ec41bc4b5e1",
+    "packaged_path": "science/affine_calibration_20261015/core.py",
+    "packaged_sha256": "aa2b84b5df511227c74f3e27f99a65db63fb4352035bbff0e0550ec41bc4b5e1",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/demand_features_20261026/core.py",
+    "original_sha256": "b59094896d0f42cf2e503afbf5f30a841a5ce09dc560e61c02089c7bd8fd9d6b",
+    "packaged_path": "science/demand_features_20261026/core.py",
+    "packaged_sha256": "b59094896d0f42cf2e503afbf5f30a841a5ce09dc560e61c02089c7bd8fd9d6b",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/demand_features_20261026/predictor.py",
+    "original_sha256": "614317589fb67d5e0df1fcb9c376735b351b22f4c8fc8bba254dc7beb35559cd",
+    "packaged_path": "science/demand_features_20261026/predictor.py",
+    "packaged_sha256": "1ee308a849a3b341436b80e4355f55f7eef554ab0c1c3b7d91a13b9ac6685031",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/demand_features_20261026/features.py",
+    "original_sha256": "336dfcb491518eddf34717961c5e501d0edef6a790b091819e46e07f89005200",
+    "packaged_path": "science/demand_features_20261026/features.py",
+    "packaged_sha256": "336dfcb491518eddf34717961c5e501d0edef6a790b091819e46e07f89005200",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/proxy_factorial_20261028/core.py",
+    "original_sha256": "72109d74cdd99181f6ca84d2afae466c61c035b8a2278814bd7ad8b6669c38b4",
+    "packaged_path": "science/proxy_factorial_20261028/core.py",
+    "packaged_sha256": "7cdce6dd47ca891d8f186453a774bdd2be9d642bb116deb47f334e0117d4770b",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/proxy_factorial_20261028/predictor.py",
+    "original_sha256": "75f0fa89142cdcccc3c9ecd5ab3a9da217aadb8f023a94c0c7ef566fb7c1bc8d",
+    "packaged_path": "science/proxy_factorial_20261028/predictor.py",
+    "packaged_sha256": "71f7e994475eb52078a1ffff87f689eb17a6027a549621b17d1ff0b37b7d0ded",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/crosssubject_aux_20261028/core.py",
+    "original_sha256": "8890e50ebe25b731f618ebfdee8f828cb8bff2cd11944f30060bdf3f6b9c4c1a",
+    "packaged_path": "science/crosssubject_aux_20261028/core.py",
+    "packaged_sha256": "29e2eafe15058a60e731f51f826867eeba095d30ecff9a8419d4b06fabb2b66d",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/crosssubject_aux_20261028/train.py",
+    "original_sha256": "4952b0e000644010c563d96567128f3f59d982319eeea3c66d5f3294ef5b1377",
+    "packaged_path": "science/crosssubject_aux_20261028/train.py",
+    "packaged_sha256": "422f798b523c48bc7d393bd609a57d7d5e7beae5a9c40aa90e380a3fb04516e6",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/mean_aux_20261029/core.py",
+    "original_sha256": "e64db4a66075f97e69df46d07ff6431c6d21b49d4d2b0d3ad07af2001924f039",
+    "packaged_path": "science/mean_aux_20261029/core.py",
+    "packaged_sha256": "92aae05d771f74c3f8e4e4b14d1448f90b12537b7698e9ad157226af46fbdd4a",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/mean_aux_20261029/train.py",
+    "original_sha256": "9ee3453b7c6418e33d230b158470c49d2d5081796c98aa4726ea298110136c6a",
+    "packaged_path": "science/mean_aux_20261029/train.py",
+    "packaged_sha256": "3dea230f0fa6fa4255674210c20207ad2fb746aaa44b9fbeb40e085df6921ba6",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/scaling/heads.py",
+    "original_sha256": "0a14ec2930bef8810c02516ae7d5d42591b146ff6a699bb6364be183933f23b9",
+    "packaged_path": "science/scaling/heads.py",
+    "packaged_sha256": "0a14ec2930bef8810c02516ae7d5d42591b146ff6a699bb6364be183933f23b9",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/autopipeline/maths.py",
+    "original_sha256": "25e61223b8f0bc7351a3ed2cdaa62c36571cd6516d8d3c4fcad3fa04cd80db59",
+    "packaged_path": "science/autopipeline/maths.py",
+    "packaged_sha256": "25e61223b8f0bc7351a3ed2cdaa62c36571cd6516d8d3c4fcad3fa04cd80db59",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/optimization/posterior.py",
+    "original_sha256": "e963592a938bacb51fedc611babab7600a284d44a2b50ba7ee53447a3eda3ab7",
+    "packaged_path": "science/optimization/posterior.py",
+    "packaged_sha256": "e963592a938bacb51fedc611babab7600a284d44a2b50ba7ee53447a3eda3ab7",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/head_tail_20261016/core.py",
+    "original_sha256": "468a8b1bdef72dc0b557747746aa3efd25331d21f05dabc9c5a4e957fab52204",
+    "packaged_path": "science/head_tail_20261016/core.py",
+    "packaged_sha256": "468a8b1bdef72dc0b557747746aa3efd25331d21f05dabc9c5a4e957fab52204",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/online_acquisition_20261015/core.py",
+    "original_sha256": "7b194f4e197af450a1f536c7c4b9bb045d67127ff9d1a6b437fa8cc5f75c0355",
+    "packaged_path": "science/online_acquisition_20261015/core.py",
+    "packaged_sha256": "7b194f4e197af450a1f536c7c4b9bb045d67127ff9d1a6b437fa8cc5f75c0355",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/online_acquisition_20261015/stream.py",
+    "original_sha256": "9f302b031ad439b536315f94871b27232d87492cf0d5401fb8f7e65f0864e84e",
+    "packaged_path": "science/online_acquisition_20261015/stream.py",
+    "packaged_sha256": "f586d96202c9caee930bc8f4b137119af66c04d1ae97385ef83349428cd2ef1d",
+    "selected_definitions": "whole pure scientific module",
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/autopipeline/experiments.py",
+    "original_sha256": "f5feba23d9ce3bda2599f282986b5107a5ec499b7061a567cab7e5173975250e",
+    "packaged_path": "science/autopipeline/experiments.py",
+    "packaged_sha256": "1017212ed78ca0067a517f54b8e7c39e56c9592465f3b1666c2c04411936a4f7",
+    "selected_definitions": [
+      "summarize"
+    ],
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/autopipeline/semantic.py",
+    "original_sha256": "de7b604f0afacd0a2deacb6aff338e60d7d27682393d46f29dc14e7c55beb9ee",
+    "packaged_path": "science/autopipeline/semantic.py",
+    "packaged_sha256": "cb46c51989d1e61151ddbc332f4ce8d5a56c6842ff5b3151c2f7d40e3ea3b0fa",
+    "selected_definitions": [
+      "digest",
+      "versions",
+      "feature_matrix",
+      "expanded_training",
+      "fit_head"
+    ],
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/strategy/transfer/experiment.py",
+    "original_sha256": "5e8d8bab05db0e32572dd045996fd3228c53b4b9acce0d4db30358141adccb58",
+    "packaged_path": "science/strategy/transfer/experiment.py",
+    "packaged_sha256": "64b20ba8977ef63afda2db0fbc3492cd08c87a6d1b7f813bd7d04378fc973f88",
+    "selected_definitions": [
+      "digest",
+      "finite_number",
+      "binary_labels",
+      "probability",
+      "subject_key",
+      "seeded",
+      "Pair",
+      "validate_references",
+      "load_data",
+      "split_pair"
+    ],
+    "adaptations": [
+      "local import namespace",
+      "ROOT / 'paiec' / 'data' / selection['revision'] / benchmark / (name + '.parquet')",
+      "hashes[str(path.relative_to(ROOT))]"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/scaling/head_campaign.py",
+    "original_sha256": "6efb67f950b7bfdafd31681b70c8b8955c98360d25c361478b6dc55fbb9aa9e1",
+    "packaged_path": "science/scaling/head_campaign.py",
+    "packaged_sha256": "f1878c891c3c654d8c67a03c727e04ff5af4fd10a05e559fa46e9ed4243ad4f6",
+    "selected_definitions": [
+      "aggregate_rows"
+    ],
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/optimization/evaluator.py",
+    "original_sha256": "15480b12a5e470a7f63da9eb6067efe0c92deed17bf0028ee22dc87934aa682d",
+    "packaged_path": "science/optimization/evaluator.py",
+    "packaged_sha256": "f360ad6ad64ea58ea44cd74b4ef7d0e9b947bc1368e8bae1e9ddc4d60f262eea",
+    "selected_definitions": [
+      "score_pair"
+    ],
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/stability/campaign.py",
+    "original_sha256": "ef7459be8352cc272389c7a9f1a2e10bf8953b3396221c9975ae349e048f35e5",
+    "packaged_path": "science/stability/campaign.py",
+    "packaged_sha256": "98008dc71f766212b683cab8483da242d71960fcd1c8609c662c8580da1bb28e",
+    "selected_definitions": [
+      "compose_rows",
+      "config",
+      "validate_rows",
+      "score"
+    ],
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/export_v6/export.py",
+    "original_sha256": "c485ae4550b528f3c956a0acf7a2f2f50e38ecaae259c7412e79455a961f81a1",
+    "packaged_path": "science/export_v6/export.py",
+    "packaged_sha256": "9e945edaf5694fc60d5b8c5e169c2281f19287b31562f4e9d5b7324dfc5f716f",
+    "selected_definitions": [
+      "config",
+      "prepare_training"
+    ],
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/online_acquisition_20261015/data.py",
+    "original_sha256": "6f2398546cabffc95111f704d4d3e962bfabdf176a476724dff2cfe1c81d905f",
+    "packaged_path": "science/online_acquisition_20261015/data.py",
+    "packaged_sha256": "ac622af43fbe4c389dff25ab3e7b9a63b255c399ec3c1b5e8c1b57764b6a813f",
+    "selected_definitions": [
+      "VisiblePrior",
+      "Catalog"
+    ],
+    "adaptations": [
+      "local import namespace",
+      "ROOT/'paiec/sharing_representation_20261015/panels/outer.json'",
+      "omit unused operational Catalog.manifest"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/head_tail_20261016/campaign.py",
+    "original_sha256": "89cf77b3db2fbf0fc5c7b0da6112d22b46a2fff349a133d966e7624222dfc944",
+    "packaged_path": "science/head_tail_20261016/campaign.py",
+    "packaged_sha256": "0b8ae05f0edae629243ce08b34c48e268f068bfc4c373d15825938e8def8130e",
+    "selected_definitions": [
+      "numpy_forward"
+    ],
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/proxy_factorial_20261028/campaign.py",
+    "original_sha256": "179822a81c4d0df5d4e1ba31e8d81e2e8da55fc4c073c7451b4eb7f8a2bc7883",
+    "packaged_path": "science/proxy_factorial_20261028/campaign.py",
+    "packaged_sha256": "385720e4578c99f1334bbd7daa5eebd95063d69d8507b8b6db0a8a265266577c",
+    "selected_definitions": [
+      "Evaluator",
+      "aggregate",
+      "gates",
+      "contrast_groups"
+    ],
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/crosssubject_aux_20261028/campaign.py",
+    "original_sha256": "a2af16e9a9070603eb8d01c92a969053cf387b004167d8f8cc14f6d339538cd3",
+    "packaged_path": "science/crosssubject_aux_20261028/campaign.py",
+    "packaged_sha256": "e5765a3cde869d14d2e9a243765808ed00d3ca494e8e8bb8f8a7d3804687512e",
+    "selected_definitions": [
+      "unique_evaluate",
+      "vectors",
+      "aggregate",
+      "gates"
+    ],
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/mean_aux_20261029/campaign.py",
+    "original_sha256": "f5ca00a02cd207b27c873f94d050cebc2e47caad2143f073827982f314d410da",
+    "packaged_path": "science/mean_aux_20261029/campaign.py",
+    "packaged_sha256": "cfb0e65c231e40aa7d30e410ce0ecde1b9b4538cadf94cbec0ec6c26c27a9b89",
+    "selected_definitions": [
+      "methods",
+      "vectors",
+      "loss",
+      "aggregate",
+      "gates"
+    ],
+    "adaptations": [
+      "local import namespace"
+    ],
+    "license": "Original project scientific implementation; upstream code licensing not asserted; see PROVENANCE.md"
+  },
+  {
+    "original_path": "paiec/demand_features_20261026/schema.json",
+    "original_sha256": "aa594b319acdc5ca98e98a5e8654c12abab95621922233165cea6d60835f059f",
+    "packaged_path": "science/demand_features_20261026/schema.json",
+    "packaged_sha256": "aa594b319acdc5ca98e98a5e8654c12abab95621922233165cea6d60835f059f",
+    "adaptations": [
+      "unchanged frozen schema"
+    ],
+    "license": "Original project authored code; upstream assets excluded"
+  },
+  {
+    "original_path": "paiec/export_v6/model.py",
+    "original_sha256": "c7c164b032173c49d30a7cbdfee1774d41044240a04c73336e6c70cb571dd446",
+    "packaged_path": "inference_model.py",
+    "packaged_sha256": "c7c164b032173c49d30a7cbdfee1774d41044240a04c73336e6c70cb571dd446",
+    "adaptations": [
+      "unchanged own project inference source"
+    ],
+    "license": "Original project authored code; upstream assets excluded"
+  },
+  {
+    "original_path": "paiec/sharing_representation_20261015/campaign.py",
+    "original_sha256": "8efc5250ac3a793f6d81260463c4c99696aee0463f17637a9536c4e68780aec7",
+    "packaged_path": "engine.py",
+    "packaged_sha256": "de01d5220aa1544a863fec800f4b206ec590710435ae8758fbf5827659d7ab0d",
+    "selected_definitions": [
+      "Coordinator.panel"
+    ],
+    "adaptations": [
+      "independent raw-input coordinator replaces historical setup and guards; function body unchanged"
+    ],
+    "license": "Original project authored code; upstream assets excluded"
+  },
+  {
+    "original_path": "paiec/affine_calibration_20261015/campaign.py",
+    "original_sha256": "39ef939c6d6cecccceb6574079ef3ce80889061289663e30124f3e08d6ad6703",
+    "packaged_path": "engine.py",
+    "packaged_sha256": "de01d5220aa1544a863fec800f4b206ec590710435ae8758fbf5827659d7ab0d",
+    "selected_definitions": [
+      "ceil_split"
+    ],
+    "adaptations": [
+      "independent raw-input coordinator replaces historical setup and guards; function body unchanged"
+    ],
+    "license": "Original project authored code; upstream assets excluded"
+  },
+  {
+    "original_path": "paiec/export_v6/prediction_config.json",
+    "original_sha256": "5f16a9ea7d24a7aaa0f2af71759e468ae1d2dbe94486be7d07a518a1afcb8614",
+    "packaged_path": "prediction_config.json",
+    "packaged_sha256": "5f16a9ea7d24a7aaa0f2af71759e468ae1d2dbe94486be7d07a518a1afcb8614",
+    "adaptations": [
+      "unchanged original concurrency configuration"
+    ],
+    "license": "Original project configuration"
+  }
+]

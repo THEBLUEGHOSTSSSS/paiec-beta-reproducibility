@@ -1,0 +1,100 @@
+{
+  "new_encoding": 0,
+  "new_fits": 0,
+  "original_reference_files": 314,
+  "reference_files": 306,
+  "source_package_manifest_sha256": "87f1ef72b048f01228dcf80268a2b5b410039239916794d5a82fd7afae577c1f",
+  "transforms": [
+    {
+      "operation": "Acquired label lists and per-budget outcome sums replaced by hashes; recompute from locally supplied official raw tables.",
+      "original_sha256": "b9bac23410d8d6838143e8b7b3b09075e7232a2345c04db91773a593ed5adf2f",
+      "path": "splits.jsonl",
+      "published_sha256": "8949d4ce0be87bd18cdc3da185c5703d24c17ab529bcff430188ae3c17c1fb1a"
+    },
+    {
+      "operation": "Acquired label lists and per-budget outcome sums replaced by hashes; recompute from locally supplied official raw tables.",
+      "original_sha256": "d483e89b6df5eb04dbcc739ccbf5c7ec961216db2fde158742242ba8ceb18e3c",
+      "path": "ceil_splits.json",
+      "published_sha256": "ed5312cd8315b4fe0d035ad406529b6ba0150d819a12dc5dbe7eb3e9b36fd4c6"
+    },
+    {
+      "operation": "Removed unused arrays: attention_mask, input_ids",
+      "original_sha256": "58807ee0985842a92b854f0a8d5821de577b902c62d49f506579a9707d892552",
+      "path": "tail_vectors.npz",
+      "published_sha256": "53ccbbf73a8e588d9ad87b1f7e2841249cb8a761b489e2e058ad75585269005c"
+    },
+    {
+      "operation": "Raw text removed; ordered hashes resolve against local permitted raw inputs.",
+      "original_sha256": "dbc15997a4f09cc5a7792300741c4af1d34db7a03ba788cd5b3794abe85d3ee6",
+      "path": "contents.json",
+      "published_sha256": "c02b7d733364f08cb433d78fd705257494c155a4c03954a905a63ac844e7e3fe"
+    },
+    {
+      "operation": "Removed unused arrays: successes, trials",
+      "original_sha256": "3d0c1d42994f193a787bb8b105cd99995e9b70182a4451ca2e237f2426f3aeaf",
+      "path": "proxy/predictions.npz",
+      "published_sha256": "f064955e0d7d7d825f45385d17fd812c8d2abb06b93f8a2c336acd39e077a3fa"
+    },
+    {
+      "operation": "Removed unused arrays: successes, trials",
+      "original_sha256": "13bac854f50e7fa4416a0f704f2cc8304b401bd67f447c7a058316651c926229",
+      "path": "cross/predictions.npz",
+      "published_sha256": "7311b99e951b4d54539c96c0d3b75147eecc12bd942a8d9120db2522a9f4ef01"
+    },
+    {
+      "operation": "Removed unused arrays: successes, trials",
+      "original_sha256": "9fd80094cb960423a31a8dbd3a12e3c8d9058bb83801a0cb37eec91970847551",
+      "path": "mean/predictions.npz",
+      "published_sha256": "66d76eeb70bfee3e5d74bfab25563ad99ce6a630a8e460b9e714adb65fb427fc"
+    },
+    {
+      "operation": "Observed-label-derived target array replaced by exact byte hash.",
+      "original_sha256": "6e41f7f27a369ea117a904f07ea0ee9588355b5c476ff06e777fab7ef7c7aab3",
+      "path": "mean/mean_targets/algotune.npz",
+      "published_sha256": null
+    },
+    {
+      "operation": "Observed-label-derived target array replaced by exact byte hash.",
+      "original_sha256": "4aeb87a67834d9ef3f123c5fe3682ab724ac568a410232c35541c04e674d8ac3",
+      "path": "mean/mean_targets/appworld.npz",
+      "published_sha256": null
+    },
+    {
+      "operation": "Observed-label-derived target array replaced by exact byte hash.",
+      "original_sha256": "5b2d7470dfa70e7a0edf898e94947bd1f23c84281a26e86bac70d177f79fc838",
+      "path": "mean/mean_targets/benger.npz",
+      "published_sha256": null
+    },
+    {
+      "operation": "Observed-label-derived target array replaced by exact byte hash.",
+      "original_sha256": "6e2cd7ed38737ba151974048cbc03fd22391f47ee08aca74eb3ce4ad589bd0e3",
+      "path": "mean/mean_targets/critic_discernment_game.npz",
+      "published_sha256": null
+    },
+    {
+      "operation": "Observed-label-derived target array replaced by exact byte hash.",
+      "original_sha256": "132c8554d2065a44c88273f3e963621d30dcb06e090205a87fc80e22932c17ef",
+      "path": "mean/mean_targets/devbench.npz",
+      "published_sha256": null
+    },
+    {
+      "operation": "Observed-label-derived target array replaced by exact byte hash.",
+      "original_sha256": "ebf826de62c99ca9a653017eec7228567f8bfed7c45da03cb5d1782718ea260c",
+      "path": "mean/mean_targets/financebench.npz",
+      "published_sha256": null
+    },
+    {
+      "operation": "Observed-label-derived target array replaced by exact byte hash.",
+      "original_sha256": "a59c8188dd7e0294b47844feeaf9f859a84292f72cb8c1f535a9502879b372e5",
+      "path": "mean/mean_targets/helm_thaiexam.npz",
+      "published_sha256": null
+    },
+    {
+      "operation": "Observed-label-derived target array replaced by exact byte hash.",
+      "original_sha256": "5eba00c2f0c137ea6c675c6f586f14e69b63159e83d2d53849afeb2639d82b73",
+      "path": "mean/mean_targets/hle.npz",
+      "published_sha256": null
+    }
+  ],
+  "untouched_originals": true
+}

@@ -25,3 +25,9 @@ their respective upstream licenses.
 This is a preparation release. Local deterministic checks are recorded in
 `CHECKS.json`; required independent scientific review remains incomplete.
 No final competition submission or organizer acceptance is claimed.
+
+## Full development reproduction
+
+The [five-scope package](full_reproduction/README.md) covers semantic stability, full-development export, structural proxy, cross-subject controls and mean auxiliary studies. Download the reference archive and code from [the fixed reproduction release](https://github.com/THEBLUEGHOSTSSSS/paiec-beta-reproducibility/releases/tag/reproduction-20261031), then follow [the commands](full_reproduction/REPRODUCE.md).
+
+**Local validation passed; independent model review remains incomplete.** See [release status](full_reproduction/RELEASE_STATUS.md). These studies retain their negative findings and do not establish new-source generalization.
