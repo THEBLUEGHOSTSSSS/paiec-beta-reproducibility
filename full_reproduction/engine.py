@@ -175,6 +175,20 @@ def forward(state, features, seed=0):
         for start in range(0,len(features),4096):values.append(torch.sigmoid(model(torch.from_numpy(features[start:start+4096].copy()))).numpy().copy())
     return np.concatenate(values)
 
+def finite_error(value):
+    """Reject invalid discrepancies before Python's max can discard them."""
+    if not math.isfinite(value):
+        raise ValueError('comparison produced a non-finite difference')
+    return value
+
+
+def array_error(actual, expected):
+    if actual.shape != expected.shape:
+        raise ValueError('compared arrays have different shapes')
+    with np.errstate(invalid='ignore', over='ignore'):
+        return finite_error(float(np.max(np.abs(actual - expected))))
+
+
 def compare_tree(actual,expected):
     if isinstance(expected,dict):
         if set(actual)!=set(expected):raise ValueError('aggregate keys differ')
@@ -182,7 +196,10 @@ def compare_tree(actual,expected):
     if isinstance(expected,list):
         if len(actual)!=len(expected):raise ValueError('aggregate lengths differ')
         return max((compare_tree(actual_entry,expected_entry) for actual_entry,expected_entry in zip(actual,expected)),default=0.)
-    if isinstance(expected,(float,int)) and not isinstance(expected,bool):return abs(float(actual)-float(expected))
+    if isinstance(expected,(float,int)) and not isinstance(expected,bool):
+        if not math.isfinite(actual) or not math.isfinite(expected):
+            raise ValueError('aggregate contains a non-finite numeric value')
+        return finite_error(abs(float(actual)-float(expected)))
     if actual!=expected:raise ValueError('non-numeric aggregate/gate differs: '+repr((actual,expected)))
     return 0.
 
@@ -203,13 +220,13 @@ def semantic(data,out,states=None,strict=True):
             prior_probability=forward(state,data.matrix[target],seed)
             with np.load(ref(f'semantic/{benchmark}/{seed}/model.npz'),allow_pickle=False) as arrays:
                 if not np.array_equal(arrays['target_indices'],target):raise ValueError('target indices differ')
-                cached_error=max(cached_error,float(np.max(np.abs(prior_probability.astype(np.float64)-arrays['predictions']))))
+                cached_error=max(cached_error,array_error(prior_probability.astype(np.float64), arrays['predictions']))
             predictions.append(prior_probability.astype(np.float64));priors[seed].update(data.map_predictions(target,prior_probability))
             fp=forward(state,data.inference,seed);fused.append(fp.astype(np.float64))
-            independent_error=max(independent_error,float(np.max(np.abs(numpy_forward(data.inference,state).astype(np.float64)-fp.astype(np.float64)))))
+            independent_error=max(independent_error,array_error(numpy_forward(data.inference,state).astype(np.float64), fp.astype(np.float64)))
         ensemble.update(data.map_predictions(target,np.mean(predictions,axis=0)))
         callback=VisiblePrior(DATA_CATALOG.inputs,np.mean(fused,axis=0));canonical=np.asarray([callback(entry) for entry in DATA_CATALOG.inputs],np.float64)
-        headtail[benchmark]=canonical;headtail_error=max(headtail_error,float(np.max(np.abs(canonical-anchor[benchmark]))))
+        headtail[benchmark]=canonical;headtail_error=max(headtail_error,array_error(canonical, anchor[benchmark]))
         event('semantic_forward',source=benchmark,heads=5,cached_max_abs_error=cached_error,headtail_max_abs_error=headtail_error)
         resources(out)
     baseline={};linear_error=0.
@@ -217,7 +234,7 @@ def semantic(data,out,states=None,strict=True):
         target=data.indices({benchmark})[1]
         with np.load(ref(f'linear/{benchmark}.npz'),allow_pickle=False) as arrays:
             if not np.array_equal(arrays['target_indices'],target):raise ValueError('linear target mismatch')
-            prior_probability=expit(data.matrix[target].astype(np.float64)@arrays['coef']+float(arrays['intercept'][0]));linear_error=max(linear_error,float(np.max(np.abs(prior_probability-arrays['predictions']))))
+            prior_probability=expit(data.matrix[target].astype(np.float64)@arrays['coef']+float(arrays['intercept'][0]));linear_error=max(linear_error,array_error(prior_probability, arrays['predictions']))
         baseline.update(data.map_predictions(target,prior_probability))
     rows={'map_reference':score(data,baseline,'map_reference',strength=2.)}
     rows.update({f'training_seed{seed}':score(data,priors[seed],f'training_seed{seed}') for seed in range(5)})
@@ -232,7 +249,7 @@ def semantic(data,out,states=None,strict=True):
         for actual_row in values:
             expected_row=original_by_key[actual_row['pair_id'],actual_row['seed'],actual_row['budget']]
             if {key:value for key,value in actual_row.items() if key!='brier'}!={key:value for key,value in expected_row.items() if key!='brier'}:raise ValueError('stability score metadata differs')
-            score_error=max(score_error,abs(actual_row['brier']-expected_row['brier']))
+            score_error=max(score_error,finite_error(abs(actual_row['brier']-expected_row['brier'])))
         dump(out/'semantic'/('scores_'+name+'.json'),values)
     summaries={name:aggregate_rows(values) for name,values in rows.items()}
     summary_error=compare_tree(summaries,read('stability_report.json')['results']['summaries'])
@@ -248,10 +265,10 @@ def export_forward(data,out,states=None):
         state=states[seed] if states is not None else load_state(ref(f'export/{seed}.npz'),prefix='')
         np.savez_compressed(folder/f'head_seed{seed}.npz',**state)
         values=forward(state,data.matrix,seed);probability.append(values.astype(np.float64))
-        error=max(error,float(np.max(np.abs(values.astype(np.float64)-numpy_forward(data.matrix,state).astype(np.float64)))))
+        error=max(error,array_error(values.astype(np.float64), numpy_forward(data.matrix,state).astype(np.float64)))
         original=load_state(ref(f'export/{seed}.npz'),prefix='')
-        parameter_error=max(parameter_error,max(float(np.max(np.abs(state[key].astype(np.float64)-original[key]))) for key in state))
-        reference_error=max(reference_error,float(np.max(np.abs(values.astype(np.float64)-forward(original,data.matrix,seed).astype(np.float64)))))
+        parameter_error=max(parameter_error,max(array_error(state[key].astype(np.float64), original[key]) for key in state))
+        reference_error=max(reference_error,array_error(values.astype(np.float64), forward(original,data.matrix,seed).astype(np.float64)))
     mean=np.mean(probability,axis=0)
     losses=[record['successes']*(1-value)**2+(record['trials']-record['successes'])*value*value for record,value in zip(data.records,mean)]
     result=dict(implemented=True,executed=True,passed=bool(error<=2e-6 and reference_error<=1e-7),heads=5,predictions=len(mean),mean_prior_sha256=array_sha(mean),numpy_torch_max_abs_error=error,reference_parameter_max_abs_error=parameter_error,reference_forward_max_abs_error=reference_error,training_brier=float(math.fsum(losses)/sum(record['trials'] for record in data.records)),heldout=False,deployment_compatibility='unexecuted; local fixed-feature head export only')
@@ -277,10 +294,10 @@ def transfer_forward(catalog,headtail,out,states=None):
                     name=f'{benchmark}__{arm}__{seed}';state=states[scope,name] if states else load_state(ref(f'{scope}/models/{name}.npz'))
                     raw_prior=forward(state,catalog.data.inference,seed).astype(np.float64);raw.append(raw_prior)
                     key=benchmark+'__'+arm if scope=='cross' else name
-                    maximum=max(maximum,float(np.max(np.abs(raw_prior-anchors[key]))))
+                    maximum=max(maximum,array_error(raw_prior, anchors[key]))
                     callbacks[arm if scope=='cross' else arm+'_s'+str(seed)]=VisiblePrior(catalog.inputs,raw_prior)
                 if scope=='mean':
-                    mean_prior=np.mean(raw,axis=0);ensemble_error=max(ensemble_error,float(np.max(np.abs(mean_prior-ensemble_anchors[benchmark+'__'+arm]))))
+                    mean_prior=np.mean(raw,axis=0);ensemble_error=max(ensemble_error,array_error(mean_prior, ensemble_anchors[benchmark+'__'+arm]))
                     callbacks[arm+'_ensemble']=VisiblePrior(catalog.inputs,mean_prior)
             result[scope][benchmark]=callbacks
             event('transfer_forward',scope=scope,source=benchmark,raw_prior_max_abs_error=maximum)
@@ -365,9 +382,9 @@ def score_transfer(catalog,headtail,callbacks,out,strict=True):
                         row=dict(context=context,target_pair=target,target_benchmark=benchmark,seed=seed,cap=cap,method=method,loss=loss,trial_count=int(trials.sum()),evaluation_items=len(trials),actual_target_labels=own_count,trajectory=count)
                         index=len(rows[scope]);old,prob,offset=anchors[scope];expected=old[index]
                         if {key:value for key,value in row.items() if key!='loss'}!={key:value for key,value in expected.items() if key!='loss'}:raise ValueError('score metadata differs: '+repr((scope,index)))
-                        checks[scope]['score_max_abs_error']=max(checks[scope]['score_max_abs_error'],abs(loss-expected['loss']))
+                        checks[scope]['score_max_abs_error']=max(checks[scope]['score_max_abs_error'],finite_error(abs(loss-expected['loss'])))
                         original=prob[offset[index]:offset[index+1]]
-                        checks[scope]['prediction_max_abs_error']=max(checks[scope]['prediction_max_abs_error'],float(np.max(np.abs(vector-original))))
+                        checks[scope]['prediction_max_abs_error']=max(checks[scope]['prediction_max_abs_error'],array_error(vector, original))
                         rows[scope].append(row)
             if replay.decisions!=trace['decisions'] or replay.purchased!=trace['purchased']:raise ValueError('actual acquisition decisions differ')
             count+=1;decisions+=len(replay.decisions)

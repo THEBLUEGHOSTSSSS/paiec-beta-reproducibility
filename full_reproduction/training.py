@@ -2,7 +2,7 @@
 import time
 import numpy as np
 from safety import MANIFEST, dump, reference_path as ref, resources
-from engine import read,load_state,event,array_sha
+from engine import read,load_state,event,array_sha,array_error
 from science.scaling import heads
 from science.stability.campaign import config
 from science.export_v6.export import prepare_training
@@ -63,7 +63,7 @@ def train_all(catalog,output):
                         model,initial,receipt=module.fit(data.records,data.matrix,catalog.inputs,{benchmark},arm,seed,expected_schedule=planned,resource_check=lambda:resources(output))
                         state=heads._state(model);controls[scope,name]=receipt
                         original=load_state(ref(f'{scope}/models/{name}.npz'))
-                        receipt['reference_parameter_max_abs_error']=max(float(np.max(np.abs(state[parameter_name].astype(np.float64)-original[parameter_name]))) for parameter_name in state)
+                        receipt['reference_parameter_max_abs_error']=max(array_error(state[parameter_name].astype(np.float64), original[parameter_name]) for parameter_name in state)
                         if arm=='pooled':
                             pooled=sem[benchmark,seed]
                             exact=all(np.array_equal(state[parameter_name],pooled[parameter_name]) for parameter_name in state)

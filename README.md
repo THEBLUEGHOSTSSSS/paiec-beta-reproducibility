@@ -22,7 +22,7 @@ See [REPRODUCE.md](REPRODUCE.md) for data acquisition and commands, and
 Code and documentation are MIT licensed. PyArrow and downloaded data retain
 their respective upstream licenses.
 
-The [camera-ready paper](https://openreview.net/notes/edits/attachment?id=K19LLF6Ycj&name=pdf) was submitted on November 19. The [camera-ready reproduction ZIP](https://github.com/THEBLUEGHOSTSSSS/paiec-beta-reproducibility/releases/download/reproduction-20261031/camera-ready-reproduction-20261119.zip) contains the corrected code, commands and evidence for the post-review controls. Local checks are recorded in the bundle. Independent whole-package review remains incomplete.
+The [camera-ready paper](https://openreview.net/notes/edits/attachment?id=vpfcq9vdOQ&name=pdf) was submitted on November 19. A [public PDF](PAIEC_report.pdf) is also available. The [reproduction ZIP](https://github.com/THEBLUEGHOSTSSSS/paiec-beta-reproducibility/releases/download/reproduction-20261031/camera-ready-reproduction-20261119-full-fit.zip) contains the control scripts, the 12 heatmap cells, the complete record of 155 fits and the numerical checks. All five cache-backed replay scopes passed. Each fresh-encoding scope exceeded at least one original tolerance. The three transfer studies retained their original decisions. Independent whole-package review remains incomplete.
 
 ## Full development reproduction
 

@@ -2,12 +2,12 @@
   "files": {
     "LICENSE": "d4be7c248c755e3e98e8ef28fc657b1b718e733bd297430d74099abb1d135f48",
     "PROVENANCE.md": "086385c01b3ce2da9dbd1aa2a71d265ca90814281f3fef611dc19cf89349a4a1",
-    "README.md": "34674088ea62f2db000d48904be00bd98908118ea0d088ea9628bffe61e7877b",
-    "REPRODUCE.md": "8167ab0dc449b5e5b132822eaa4eafa2e2677a220e0654a363ccb0dcb957667d",
+    "README.md": "bbb726ecc25eee30de5fe24252e8f80cee336e195b2f57d745e39ea22c283582",
+    "REPRODUCE.md": "52dcac616cfcffb0889772d8874d441842a1306fce503c442dafc2d60b75c4d4",
     "assemble_export.py": "704b1b8ead34bebb99990770cc08a42d86ef7c7d058693e2262c631645ec8065",
     "build_reference.py": "0f8c35890740b5afb55d7961ba1843d19597d1df6fbd66d90333851c85ab00f1",
     "encoding.py": "6a9c6344053b95910ed77af0edc4eef3d7a2518009b83496c9f666f89d5f0fb5",
-    "engine.py": "bea562e0f49200113065b2b6f51ecbc4e9db99d3c0663998ff2d55408ca0f406",
+    "engine.py": "6d512d9ab9961c7afd1111902fb2747085d07479bb5b8faf36fc6026937f9758",
     "inference_model.py": "c7c164b032173c49d30a7cbdfee1774d41044240a04c73336e6c70cb571dd446",
     "input_manifest.json": "963c7dd49ad159888384362f74293837d6df49d814eb5ef47057669cd81cfca7",
     "prediction_config.json": "5f16a9ea7d24a7aaa0f2af71759e468ae1d2dbe94486be7d07a518a1afcb8614",
@@ -59,9 +59,10 @@
     "science/strategy/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "science/strategy/transfer/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "science/strategy/transfer/experiment.py": "64b20ba8977ef63afda2db0fbc3492cd08c87a6d1b7f813bd7d04378fc973f88",
-    "source_provenance.json": "64a5fb7ac035fb9de35e0bfe8fa933e3ee06aa74822a4f821d846ff299d52af5",
+    "source_provenance.json": "6fda4ad3f155a5e684772fd430a00b19e2e66c3067601e604d1556ae64906191",
+    "test_aggregate_parity.py": "3b9c93f1f56ffbc2dda99842f48800804b6f01c9c103080baa068ef0981f7126",
     "test_safety.py": "ce93ba140b8cea0e0c4bbb616014f00e80547d559b33b8e48916841c1a73b3a9",
-    "training.py": "3b4fc7e4fb256cc73d9a58d4b6ef8822fef0acb8ac0dae6eeaf3075c0edb7b56"
+    "training.py": "16ee541c8a8d5359c1137f001d2d1091fc7988f8d844071ef2f4027f81f552e3"
   },
   "schema_version": 1
 }

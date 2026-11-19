@@ -387,7 +387,7 @@
     "original_path": "paiec/sharing_representation_20261015/campaign.py",
     "original_sha256": "8efc5250ac3a793f6d81260463c4c99696aee0463f17637a9536c4e68780aec7",
     "packaged_path": "engine.py",
-    "packaged_sha256": "de01d5220aa1544a863fec800f4b206ec590710435ae8758fbf5827659d7ab0d",
+    "packaged_sha256": "6d512d9ab9961c7afd1111902fb2747085d07479bb5b8faf36fc6026937f9758",
     "selected_definitions": [
       "Coordinator.panel"
     ],
@@ -400,7 +400,7 @@
     "original_path": "paiec/affine_calibration_20261015/campaign.py",
     "original_sha256": "39ef939c6d6cecccceb6574079ef3ce80889061289663e30124f3e08d6ad6703",
     "packaged_path": "engine.py",
-    "packaged_sha256": "de01d5220aa1544a863fec800f4b206ec590710435ae8758fbf5827659d7ab0d",
+    "packaged_sha256": "6d512d9ab9961c7afd1111902fb2747085d07479bb5b8faf36fc6026937f9758",
     "selected_definitions": [
       "ceil_split"
     ],

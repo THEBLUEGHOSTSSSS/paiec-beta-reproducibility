@@ -56,7 +56,7 @@ python reproduce.py --mode train --data-root "$ROOT/data" --reference-root "$ROO
 python assemble_export.py --heads-root "$ROOT/replay-output/full_export" --encoder-root "$ROOT/e5-assets" --output "$ROOT/inference-export"
 ```
 
-The November 19 CPU run rebuilt all 9,389 prefix vectors and 1,565 tail windows. Maximum absolute differences from the archived vectors were 2.87e-7 and zero. All 50 source-excluded heads and five export heads completed, followed by seven transfer fits before interruption. The remaining transfer fits have no fresh-encoding result. All 155 fits had previously completed with archived embeddings. Hosted execution remains unverified.
+The November 19 CPU run rebuilt all 9,389 prefix vectors and 1,565 tail windows. Maximum absolute differences from the archived vectors were 2.87e-7 and zero. All 155 fresh-encoding fits and all five scoring scopes completed. Each scope exceeded at least one original tolerance. The three transfer scopes retained their discrete decision gates, with maximum row-level Brier difference 2.96e-06. The parent archive includes a separate check of the fitted files and score rows. All 155 fits had previously completed with archived embeddings. Hosted execution remains unverified.
 
 `replay_report.json`, `training_summary.json`, score tables and negative-contrast
 files distinguish executed checks from unexecuted routes. They are development
