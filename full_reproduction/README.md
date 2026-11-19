@@ -18,8 +18,7 @@ the user's local, hash-checked official data.
 `replay` uses the saved parameters and original embeddings; `train` performs the
 fixed 155 fits with those embeddings. `train --encoder-root ...` additionally
 rebuilds the embeddings using pinned local E5 assets. These are different
-validation levels. Both complete replay and the 155-fit route were executed;
-fresh encoding and a new hosted deployment were not executed.
+validation levels. Cache-backed replay and 155 fits with archived embeddings completed. The fresh-encoding run rebuilt all vectors and completed 62 fits, including all 50 source-excluded semantic heads. The organizer-hosted runtime was not rerun.
 
 The released execution receipts record exact counts, numeric differences,
 original source hashes and dependency versions. All reported studies use the

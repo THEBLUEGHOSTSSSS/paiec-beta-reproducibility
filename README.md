@@ -22,12 +22,10 @@ See [REPRODUCE.md](REPRODUCE.md) for data acquisition and commands, and
 Code and documentation are MIT licensed. PyArrow and downloaded data retain
 their respective upstream licenses.
 
-This is a preparation release. Local deterministic checks are recorded in
-`CHECKS.json`; required independent scientific review remains incomplete.
-No final competition submission or organizer acceptance is claimed.
+The [camera-ready paper](https://openreview.net/notes/edits/attachment?id=K19LLF6Ycj&name=pdf) was submitted on November 19. The [camera-ready reproduction ZIP](https://github.com/THEBLUEGHOSTSSSS/paiec-beta-reproducibility/releases/download/reproduction-20261031/camera-ready-reproduction-20261119.zip) contains the corrected code, commands and evidence for the post-review controls. Local checks are recorded in the bundle. Independent whole-package review remains incomplete.
 
 ## Full development reproduction
 
-The [five-scope package](full_reproduction/README.md) covers semantic stability, full-development export, structural proxy, cross-subject controls and mean auxiliary studies. Download the reference archive and code from [the fixed reproduction release](https://github.com/THEBLUEGHOSTSSSS/paiec-beta-reproducibility/releases/tag/reproduction-20261031), then follow [the commands](full_reproduction/REPRODUCE.md).
+The [five-scope package](full_reproduction/README.md) covers semantic stability, full-development export, structural proxy, cross-subject controls and mean auxiliary studies. Download the original reference archive and the camera-ready code ZIP from [the fixed reproduction release](https://github.com/THEBLUEGHOSTSSSS/paiec-beta-reproducibility/releases/tag/reproduction-20261031), then follow [the commands](full_reproduction/REPRODUCE.md).
 
 **Local validation passed; independent model review remains incomplete.** See [release status](full_reproduction/RELEASE_STATUS.md). These studies retain their negative findings and do not establish new-source generalization.

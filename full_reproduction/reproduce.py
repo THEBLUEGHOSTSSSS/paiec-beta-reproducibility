@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Five fixed development scopes. No network, production guards or retries."""
 import argparse
+import json
 import os
 import sys
 
@@ -31,6 +32,9 @@ def main(argv=None):
             return 0
         from engine import run
         run(args.mode, data, ref, out, encoder)
+        report = json.loads((out/'replay_report.json').read_text())
+        if report.get('passed') is not True:
+            raise ValueError('Numerical verification failed; see replay_report.json for per-scope results')
         return 0
     except Exception as exc:
         if out is not None and out.is_dir() and (out/'input_receipt.json').is_file():

@@ -1,6 +1,3 @@
-# Release validation status
+# Reproduction status
 
-Published with explicit author authorization on 2026-11-03.
-Local validation passed; required independent model review remains incomplete due to transport errors. This release is not final technical acceptance or organizer acceptance. Original review history and unknown outcomes are retained.
-
-Six local behavioral checks passed again on 2026-11-03. Recorded numerical validation covers full cache-backed replay and 155 fixed fits. Fresh encoding and hosted deployment were not rerun. Original negative results and scope limitations remain unchanged.
+The November 19 camera-ready bundle corrects the code manifest and command examples. The numerical command reports failure if any scope fails its recorded criteria. All five cache-backed scopes passed locally. New post-review comparisons, regenerated embeddings and a partial fresh-fit run are documented in the companion evidence files. Independent whole-package review remains incomplete following transport errors.

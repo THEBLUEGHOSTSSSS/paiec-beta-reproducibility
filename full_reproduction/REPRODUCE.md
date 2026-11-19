@@ -15,13 +15,13 @@ fresh encoding additionally needs the upstream encoder assets.
    [fixed reproduction release](https://github.com/THEBLUEGHOSTSSSS/paiec-beta-reproducibility/releases/tag/reproduction-20261031).
    The archive is a derived numerical reference, not raw data or a newly fitted
    result. It contains no original-workspace dependency.
-3. Run these commands from this code directory, using fresh output paths:
+3. Set ROOT to an absolute working directory containing the ZIP and the data subdirectory. From this code directory run the commands below, using fresh output paths.
 
 ```sh
-python build_reference.py --bundle-archive ../reference-20261031.zip --output ../reference
-python reproduce.py --mode verify --data-root ../allowed-data --reference-root ../reference --output ../verify-output
-python reproduce.py --mode replay --data-root ../allowed-data --reference-root ../reference --output ../replay-output
-python reproduce.py --mode train --data-root ../allowed-data --reference-root ../reference --output ../fresh-fit-output
+python build_reference.py --bundle-archive "$ROOT/reference-20261031.zip" --output "$ROOT/reference"
+python reproduce.py --mode verify --data-root "$ROOT/data" --reference-root "$ROOT/reference" --output "$ROOT/verify-output"
+python reproduce.py --mode replay --data-root "$ROOT/data" --reference-root "$ROOT/reference" --output "$ROOT/replay-output"
+python reproduce.py --mode train --data-root "$ROOT/data" --reference-root "$ROOT/reference" --output "$ROOT/fresh-fit-output"
 ```
 
 The archive extractor verifies every member, rejects unlisted paths, links,
@@ -52,15 +52,11 @@ in `input_manifest.json` from
 [multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small/tree/614241f622f53c4eeff9890bdc4f31cfecc418b3), then run:
 
 ```sh
-python reproduce.py --mode train --data-root ../allowed-data --reference-root ../reference --encoder-root ../e5-assets --output ../fresh-encoding-output
-python assemble_export.py --heads-root ../replay-output/full_export --encoder-root ../e5-assets --output ../inference-export
+python reproduce.py --mode train --data-root "$ROOT/data" --reference-root "$ROOT/reference" --encoder-root "$ROOT/e5-assets" --output "$ROOT/fresh-encoding-output"
+python assemble_export.py --heads-root "$ROOT/replay-output/full_export" --encoder-root "$ROOT/e5-assets" --output "$ROOT/inference-export"
 ```
 
-Fresh encoding implements the original query prefix, 512-token masked-mean/L2
-pooling, prefix-preserving tail windows and head-tail fusion. It was implemented
-but not run in the recorded validation. Encoder/backend numerical differences
-remain possible. Export assembly is implemented; it is not a hosted
-compatibility test and does not submit a model.
+The November 19 CPU run rebuilt all 9,389 prefix vectors and 1,565 tail windows. Maximum absolute differences from the archived vectors were 2.87e-7 and zero. All 50 source-excluded heads and five export heads completed, followed by seven transfer fits before interruption. The remaining transfer fits have no fresh-encoding result. All 155 fits had previously completed with archived embeddings. Hosted execution remains unverified.
 
 `replay_report.json`, `training_summary.json`, score tables and negative-contrast
 files distinguish executed checks from unexecuted routes. They are development

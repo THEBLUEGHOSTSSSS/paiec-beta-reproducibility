@@ -6,7 +6,7 @@ adapted functions and packaged hashes. `package_manifest.json` binds the code
 and metadata. No third-party baseline implementation is incorporated.
 
 Raw inputs remain external. `input_manifest.json` pins measurement-db revision
-`54074453da7b9911be0f48e4c560be547bc84d21`, ten allowed development benchmarks and
+`54074453da7b9911be0f48e4c560be547bc84d21`, ten recorded development benchmarks and
 forty individual file hashes. Download/access rights come from the upstream
 dataset, not this project's MIT license. No raw response table or question text
 is redistributed. Confirmation reserve data are not used.
